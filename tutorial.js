@@ -244,3 +244,64 @@ oursub.unshift("Physics")
   // FUNCTIONS
   //Functions allows code to be reused
   // Anythig in the function is run anytime the function is called
+function myData() {
+   console.log("Hello")
+  }
+  myData(); //When ever the function i runthe console will rply 'Hello'
+
+  // Functions with data in the parenthases
+  function ourData(a, b) {
+   console.log(a+b)
+  }
+ourData(12-7); // 12 is 'a' while 'b' is 7. So the asswer is 5
+
+// SCOPE
+// Scope is the visibility of variables
+// Globalscope means they can be seen everywhere in your java script code e.g
+var myGlobal = 10 // Global variable (Not within a function)
+function fun1() {
+   noGlobal = 7 ; //Global variable because it lacks the 'keyword'
+}
+function fun2() {
+   var ouput = "";
+   if (typeof myGlobal != "undefined") {
+      ouput += "myGlobal: " + myGlobal;
+   }
+   if (typeof noGlobal != "undefined") {
+      ouput += " not global" + noGlobal;
+   }
+   console.log(ouput)
+}
+fun1()
+fun1()
+
+// Local Scope
+// Local scope is when variables are declaersd within a function
+function myLocal() {
+   var myScope = 5
+   console.log(myScope)
+}
+myLocal(); // It is goning to give 5
+console.log(myScope) // This will result to an error
+
+// Having a local and global variable is possible
+// The local scope will show
+var outreWear = "T-Shirt";
+function myOutfit() {
+   var outreWear = "sweater"
+   return outreWear
+}
+console.log(myOutfit()) // It is going to say 'sweater'
+console.log(outreWear) // It's 'T-Shirt'
+
+// Using Of Return
+// We can return a value with the return statement
+function addDition(a) {
+   return a + 2
+}
+console.log(addDition(5)) //Answer is 7
+// If the ruturn value is not specified it is undefined.
+var myNum = 16
+function theNum() {
+   myNum = myNum =_6
+} // It is going to be undefined
