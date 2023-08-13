@@ -305,3 +305,208 @@ var myNum = 16
 function theNum() {
    myNum = myNum =_6
 } // It is going to be undefined
+
+// Assigning a return value to a variable
+var changed = 0
+function change(c) {
+   return (c + 2) * 3  // Answer is 21
+}
+changed = change(5); // Value retured will be stored in 'changed'
+
+// Remeving and adding items
+function firstList(arr, item) {
+   arr.push(item)
+   return arguments.shift();
+}
+var testArr = [1,2,3,4,5]
+console.log(JSON.stringify(testArr)) // It will be [1,2,3,4,5]
+console.log(firstList(testArr, 6)) // It's 1
+console.log(JSON.stringify(testArr)) // It's [2,3,4,5,6]
+
+// BOOLEANS
+// Booleans can be used in javascript returns
+function booLean() {
+   return true
+}
+
+// If statments
+function statMent(sky) {
+   if (sky) {
+      return "It is true"
+   }
+   return "It is false"
+}
+console.log(sky(false)) // 'It is false'
+
+  // Equulity operator
+function testEqual(val) {
+   if (val = 12) {    // '=' is the assignment operater not eqality
+      return "Equal"
+   }
+   return 'Not equal'
+}
+console.log(testEqual(12)) // 'Equal'
+
+// Strict Equality
+/*
+5 === 5 (This is correct)
+5 === '5' (It is wrong because it will not seen the 5 as a number)
+5 == 5 (correct)
+5 == '5' (correct)
+ */
+function testEqual(val) {
+   if (val = 5) {  
+      return "Equal"
+   }
+   return 'Not equal'
+}
+console.log(testEqual('5')) // Not equal
+
+// Inequality Operator
+function eQual(val) {
+   if (val != 4) {
+      return "Not Equal"
+   }
+   return "Equal"
+}
+console.log(eQual(5)) // Equal
+
+// Strict Inequality
+function notEqual(val) {
+   if (val !== 17) {
+      return "Not equal"
+   }
+   return "Equal"
+}
+console.log(notEqual('17')) // Not equal
+
+// Greaterthan operator
+function testGreaterThan(val) {
+   if (val > 100) {
+      return "Over 100"
+   }
+   if (val > 10) {
+      return "Over 10"
+   }
+   return "10 or under"
+}
+console.log (testGreaterThan(15)) // 'Over 10'
+   // Lessthan is the opposite
+
+   // Greeaterthan or equal to
+function  equalTo (val) {
+   if (val >= 20) {
+      return "20 or over"
+   }
+   if (val) {
+      return "10 or Over"
+   }
+return "Less than 10"   
+}
+console.log(equalTo(25)) // '20 or over'
+// It is the opposite of lessthan or equal to
+
+// Checking two conditions
+// And operator
+function thierAge(age) {
+   if (age > 20 && age < 30) {
+      return "Perfect age"
+   }
+   return "bad age"
+}
+console.log(thierAge(19)) // 'Bad age'
+
+//Or operator
+function temParature(deg) {
+   if (deg < 22 || deg > 28) {
+      return "Normal temparature"
+   }
+   return "Abnormal tempparature"
+}
+console.logt(temParature(23)) // 'Normal temparatue'
+
+// ELse statments
+function elSe(val) {
+   if (val > 5) {
+      return "Bigger the 5"
+   } else {
+      return "5 or smaller"
+   }
+}
+console.log(elSe(7)) // 'Bigger than 5'
+
+// Else if statments
+// When using else if statmentes the order in which the are arranged is very inportant the is why I begun with '5' be for '10'
+function elseIf(val) {
+   if (val > 5) {
+      return "More than 5"
+   } else if (val < 10) {
+      return "Less than 10"
+   } else {
+      return  "Between 5 and 10"
+   }
+}
+console.log(elseIf(7)) //'Less than 10'
+
+// SWITCH STATEMENTS
+function caseSwitch(val) {
+   var answer = ""
+   switch(val) {
+      case 1: 
+         answer = "alpha";
+         break;
+      case 2:
+         answer = "beta"
+         break;
+      case 3: 
+         answer = "gama";
+         break;
+      case 4:
+         answer = "delta"
+         break;
+   }
+   return answer
+}
+console.log(caseSwitch(1)) // 'alpha'
+console.log(caseSwitch(2)) // 'beta'
+console.log(caseSwitch(3)) // 'gama'
+console.log(caseSwitch(4)) // 'delta'
+
+// Default 
+// Default is ys used as an if else statement 
+function deFault() {
+   var answer = ""
+   switch(val) {
+      case 1: 
+         answer = "dance";
+         break;
+      case 2:
+         answer = "sing"
+         break;
+      default:
+         answer = "others"
+         break;   
+   }
+}
+console.log(deFault(20)) // 'others'
+
+// Identical optins in switch statment
+function opTion(val) {
+   var answer = "";
+   switch(val) {
+      case 1:
+      case 2:
+      case 3:
+         answer = "Low"
+      break;
+      case 4:
+      case 5:
+      case 6:
+         answer = "Medium"
+      break;
+      default:
+         answer = "High"
+         break;
+   }
+}
+console.log(opTion(5)) // 'Medium'
