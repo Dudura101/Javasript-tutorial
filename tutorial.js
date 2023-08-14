@@ -510,3 +510,44 @@ function opTion(val) {
    }
 }
 console.log(opTion(5)) // 'Medium'
+
+// Function rturning a boolean
+function isLess(a, b) {
+   return a < b
+}
+console.log(isLess(10, 15)) // 'true'
+console.log(isLess(20, 15)) // 'false'
+
+// Card counting
+var count = 0
+function cc(card) {
+   switch(card) {
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+      case 6:
+         count++;
+         break; 
+      case 10:
+      case "J":
+      case "Q":
+      case "K":
+      case "A":
+         count--;
+         break     
+   }
+   var holdbet = 'Hold'
+   if (count > 0) {
+      holdbed = 'Bet'
+   }
+   return count + " " + holdbet
+}
+cc(2); cc(3); cc(7); cc('K'); cc('A')
+console.log(cc(4)) // '1 Bet'
+/*
+cc(2); cc('K'); cc(10); cc('K'); cc('A')
+console.log(cc(4))  '-2 Hold' will be the reply
+ */
+
+// OBJECTS
