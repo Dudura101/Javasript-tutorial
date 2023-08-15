@@ -551,3 +551,136 @@ console.log(cc(4))  '-2 Hold' will be the reply
  */
 
 // OBJECTS
+// Objects are similar to arrays but we use properties instead of indexes
+var ourDog = {
+   "name": "Camper",
+   "legs": 4,
+   "tails": 1,
+   "friends": ["everything"]
+};
+ 
+// Accessing properties on an object
+ var testObj = {
+   "hat": "ballcap",
+   "shirt": "jersey",
+   "shoes": "cleats"
+ }
+ var hatValue = testObj.hat // 'ballcap'
+ var shirtValue = testObj.shirt // 'jersey'
+ var shoeValue = testObj.shoes // 'cleates'
+
+// Using bracket notations to access proprties in an object
+// Bracket notations can be used if the object has a space in it
+var testObje = {
+   "an entree": "hamburger", 
+   "my side": "veggies",
+   "the drink": "water"
+};
+var entreeValue = testObje["an entree"] // hambuger
+var drinkValue = testObje["the drink"] // water
+var sideValue = testObje['my side'] // veggies
+
+// Accessing Object Properties with Variables
+var testOb = {
+   12: "John",
+   16: "Peter",
+   19: "Paul"
+};
+var playerNumber = 16;
+var player = testOb[playerNumbers];
+
+//Updating objest properties
+var hisDog = {
+   "name": "Camper",
+   "legs": 4,
+   "tails": 1,
+   "friends": ["everything"]
+}
+hisDog.name = "Sad Jack"
+
+// Adding new properties to objecs
+var herDog = {
+   "name": "Camper",
+   "legs": 4,
+   "tails": 1,
+   "friends": ["everything"]
+}
+hisDog['bark'] = "woof"
+
+// Delete ites from an object
+var ourDog = {
+   "name": "Camper",
+   "legs": 4,
+   "tails": 1,
+   "friends": ["no friends"]
+}
+hisDog['bark'] = "woof"
+delete ourDog.tails;
+
+// Using objests for lookups
+function lookUp(val) {
+   var result = "";
+}
+var lookup = {
+   "alpha": "Adams",
+   "bravo": "Bosten",
+   "charlie": "chicago",
+   "delta": "Denver",
+   "echo": "Easy",
+   "foxtrot": "frank"
+}
+result = lookup[val];
+return result;
+console.log(lookUp("charlie")) // Chicago
+console.log(lookUp("echo")) // Easy
+
+// Testing objects for properties
+var theObj = {
+   gift: "pony",
+   pet: "kitten",
+   bed: "sleigh"
+}
+function checkObj(checkProb) {
+   if (theObj.hasOwnProperty(checkProp)) {
+      return ourObj[checkProp]
+   } else {
+      return "Not Found"
+   }
+}
+console.log(checkObj(gift)) // 'pony'
+
+// Acsssing nested objects
+var myStorage = {
+   "car": {
+      "inside": {
+         "glove box": "maps",
+         "passenger seat": "crumbs"
+      },
+      "outside": {
+         "trunk": "jack"
+      }
+   }
+};
+var gloveBoxContents = myStorage.car.inside["glove box"];
+console.log(gloveBoxContents) // 'maps'
+
+//Accessing nested arrays
+var myPlants = [
+   {
+      type: "flowers",
+      list: [
+         "rose",
+         "tulip",
+         "dandelion"
+      ]
+   },
+   {
+      type: "trees",
+      list: [
+         "fir",
+         "pine",
+         "birch"
+      ]
+   }
+]
+var secondTree = myPlants[1].list[1]; // 'pine'
