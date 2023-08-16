@@ -177,7 +177,7 @@ Individual Characters of a strinng  cannot be changed
 var statMent = "Delcome home"
 
 stateMent[0] = "W" (wrong)
-stateMent = "Welcome home" (correct) 
+stateMent = "Welcome home" (correct)
  */
 
 var favGame = "Puzzle"
@@ -684,3 +684,140 @@ var myPlants = [
    }
 ]
 var secondTree = myPlants[1].list[1]; // 'pine'
+
+// LOOPS
+// While loop
+var myArray = []
+var i = 0
+while(i < 5) {
+   myArray.push(i)
+   i++
+}
+console.log(myArray) // [0, 1, 2, 3, 4]
+
+// For loops
+var ourArray = []
+for (var i = 0; i < 4; i++) {
+   ourArray.push(i)  //  [0, 1, 2, 3]
+}
+
+// Even numbers with for loop
+var yourArray = []
+for (var i = 0; i < 10; i += 2) {
+   yourArray.push(i)
+}
+console.log(yourArray) // [2, 4, 6, 8]
+
+// Odd numbers with for loop
+var youArray = []
+for (var i = 0; i < 10; i += 2) {
+   youArray.push(i)
+}
+console.log(youArray) // [1, 3, 5, 7, 9]
+
+// Count Backwards with for loop
+var theyArray = []
+for (var i = 10; i > 0; i -= 2) {
+   theyArray.push(i);
+}
+console.log(theyArray) // [10, 8, 6, 4, 2]
+
+// Iterate through an array with for loop
+var herArray = [9, 10, 11, 12]
+var herTotal = 0 
+
+for (var i = 0; i < herArray.length; i++) {
+   herTotal += herArr[i]
+}
+console.log(herTotal)  // 42
+
+// Nesting for loops
+function multiplyAll(arr) {
+   var product = 1;
+   for (var i=0; i < arr.length; i++) {
+      for (var j=0; j < arr[i].length; j++){
+         product *= arr[i][j]
+      }
+   }
+   return product
+}
+var product = multiplyAll([[[1, 2], [3, 4], [5, 6, 7]]])
+console.log(product); // 5040
+
+// Iterate with Do while loops
+var hisArray = []
+var i = 10
+do {
+   hisArray.push(i);
+   i++;
+} while (i < 5) 
+console.log(i, hisArray) // 11,[10]
+
+// Profile lookup 
+var contects = [
+   {
+      "firstName": "Akira",
+      "lastName": "Laine",
+      "number": "0543358326",
+      "likes": ["Pizza", "Coding", "Bownie Points"]
+   },
+   {
+      "firstName": "Harry",
+      "lastName": "Potter",
+      "number": "0993284385",
+      "likes": ["Hogwarts", "Magic", "Hagid"]
+   },
+   {
+      "firstName": "Sherlock",
+      "lastName": "Holmes",
+      "number": "0487345643",
+      "likes": ["Intriguing Cases", "Violin",]
+   },
+   {
+      "firstName": "Krisrian",
+      "lastName": "Vos",
+      "number": "unknown",
+      "likes": ["JavaScript", "Gaming", "Foxes"]
+   }
+]
+function lookUpProfile(name, prop){
+   for (var i = 0; i < contacts.length; i++) {
+      if (contacts[i].firstName === name) {
+         return contacts[i][prop] || "No such property"
+      }
+   }
+   return "No such contact"
+}
+var data = looUpProfile("Akira", "likes");
+console.log(data) // ["Pizza", "Coding", "Bownie Points"]
+
+// Generate random fractions
+function randomFraction() {
+   return Math.random()
+}
+console.log(randomFraction); // Generate a number between 1 and 0
+
+// Generate whole number
+function randomWholeNum() {
+   return Math.floor(Math.random() * 10)
+}
+console.log(randomWholeNum())// Generates a whole number between 1 and 10
+
+// Generate random numbers within a range
+function ourRandomRange(ourMin, ourMax) {
+   return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin
+}
+console.log(ourRandomRange(2, 9)) // Random number between 2 and 9
+
+// Use th parseInt function
+function convertToInterger(str) {
+   return parseInt(str)
+}
+console.log(convertToInterger("56")) // 56
+
+// Use the parseInt Function with a Radix
+function convertToInterger(str) {
+
+}
+convertToInterger("10011")
+
