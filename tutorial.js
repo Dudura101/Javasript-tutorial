@@ -819,5 +819,27 @@ console.log(convertToInterger("56")) // 56
 function convertToInterger(str) {
 
 }
+return parseInt(str,2)
 convertToInterger("10011")
 
+// Use te conditional operator
+function checkEqual(a, b ) {
+   return a === b ? true : false;
+   return a === b
+}
+
+checkEqual(1, 2)
+
+// Use multiple conditional statemants
+function checkSign(num) {
+   return num > 0 ? "positive" : num < 0 ? "negative" : "zero"
+}
+console.log(checkSign(10)) // 'positive'
+console.log(checkSign(-10)) // 'negative'
+console.log(checkSign(0)) // 'zero'
+
+// Difference btw var and let
+// let does not allow you declear a vaariable twice
+
+//Declearing a read only variable with const
+// A const cannot be reassigned
