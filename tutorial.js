@@ -843,3 +843,77 @@ console.log(checkSign(0)) // 'zero'
 
 //Declearing a read only variable with const
 // A const cannot be reassigned
+
+// Mutating Arrays with const
+const s = [5, 7, 2]
+function editInPlace() {
+   "use strict";
+   s[0] = 2
+   s[1] = 5
+   s[2] = 7
+}
+editInPlace()
+console.log(s) // [2, 5, 7]
+
+// Prevent Object Mutation
+function freezeObject() {
+   "use strict"
+   const MATH_CONSTANTS = {
+      PI: 3.14
+   }
+   Object.freeze(MATH_CONSTANTS)
+
+   try {
+      MATH_CONSTANTS.PI = 99
+   } catch(ex) {
+      console.log(ex)
+   }
+   return MATH_CONSTANTS.PI
+} //  (error message)
+
+// Use arrow functions to write concise anonymous function
+// an anonymous fynction can be changed to arrow
+var magic = function(){
+   return new Date();
+}; // (anonymous function)
+var magic = () => new Date() // (arrow function)
+
+// Write arrow functions with parameters
+var myConcat = (arr1, arr2) => arr.concat(arr3)
+console.log(myContact([1, 2], [3, 4, 5]))
+
+// Write higher order arrow function
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]
+const squareList = (arr) => {
+   const squaredIntegers = arr.filter(num => Number,isInterger(num) && num > 0).map(x => x * x);
+   return squaredInters
+}
+const squaredInters = squareList(realNumberArray)
+console.log(squaredIntegers) // [16, 1764, 36]
+
+// Write higher order arrow functions
+const increment = (function () {
+   return function increment(number, value = 1) {
+      return number + value;
+   }
+})();
+console.log(increment(5, 2)) // 7
+console.log(increment(5)) // 6
+
+// Use the rest operator with function parameters
+const sum = (function() {
+   return function sum(...args) {
+      return args.reduce((a, b) => a + b)
+   };
+});
+console.log(sum(1, 2, 3)); // 6
+
+// Use the spread operator to evaluate arrays in-place
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY']
+let arr2;
+(function() {
+   arr2 = [...arr1];
+   arr1[0] = 'potato'
+})();
+console.log(arr2) // ['JAN', 'FEB', 'MAR', 'APR', 'MAY']
+console.log(arr1) // ['potato', 'FEB', 'MAR', 'APR', 'MAY']
